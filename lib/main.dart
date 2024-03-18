@@ -40,8 +40,14 @@ class DuckyGrid extends StatelessWidget {
       itemCount: duckyCount,
       itemBuilder: (context, index) => Container(
         color: Colors.black87,
-        child: Center(
-          child: Image.asset('assets/minibuilds-ducky.png'),
+        child: Column(
+          children: [
+            Image.asset('assets/minibuilds-ducky.png'),
+            Text(
+              'Duck ${index + 1}',
+              style: const TextStyle(color: Colors.white),
+            )
+          ],
         ),
       ),
     );
